@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "252393594776",
+    "project_id": "nayeankh",
+    "storage_bucket": "nayeankh.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252393594776:android:24351a3834dbaea54c55ed",
+        "android_client_info": {
+          "package_name": "com.example.nayepankh_hub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD5geVok6YIq4mAUBo_Xzx49wPbKrCwrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

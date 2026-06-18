@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NayePankh Hub Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .active-scale:active { transform: scale(0.95); }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#005049",
+                        "tertiary-fixed": "#ffddb8",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-surface-variant": "#3d4947",
+                        "tertiary": "#825100",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#006a61",
+                        "secondary-container": "#316bf3",
+                        "outline-variant": "#bcc9c6",
+                        "surface-variant": "#d3e4fe",
+                        "on-tertiary-container": "#fffbff",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "inverse-primary": "#6bd8cb",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-error": "#ffffff",
+                        "primary-container": "#008378",
+                        "surface-dim": "#cbdbf5",
+                        "on-surface": "#0b1c30",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#213145",
+                        "background": "#f8f9ff",
+                        "primary-fixed": "#89f5e7",
+                        "on-tertiary-fixed": "#2a1700",
+                        "outline": "#6d7a77",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "secondary": "#0051d5",
+                        "on-secondary-container": "#fefcff",
+                        "surface-container-high": "#dce9ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9ff",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#00685f",
+                        "surface-bright": "#f8f9ff",
+                        "tertiary-container": "#a36700",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "on-secondary-fixed": "#00174b",
+                        "surface-container": "#e5eeff",
+                        "on-primary-container": "#f4fffc",
+                        "on-background": "#0b1c30",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "xl": "64px",
+                        "md": "24px",
+                        "gutter": "20px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "max-width-content": "1200px",
+                        "sm": "12px",
+                        "margin-desktop": "auto",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface/80 shadow-sm h-16 flex items-center justify-between px-margin-mobile">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform" data-icon="arrow_back">arrow_back</button>
+<div class="flex items-center gap-2">
+<img alt="Logo" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOng0A_nB40syAdZEVx6fUqNR2WKQQGw4js5bJyriWExuwoMoXaXCi7SbyZaSVLQIK8n0tAayDASqSVHkyNua6JybKH_imVBj61-_XXLeoS6pkhOHTLD2_jFaUHZSpftjBoidMCUAfN4nYlCIo33cqv1Ahl3xEuGCD4NvXnu9o0Iy_KzuyH2DLTeh3JplfNZvqYpbFUCxdXSau09OLb3ubiubr2RV6eN2Ts0QsEur8JWEZOym2R8YZz9fI7USLiyEma8S2R36JxOyh"/>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">NayePankh Hub</h1>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-on-surface-variant active:scale-95 transition-transform" data-icon="notifications">notifications</button>
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant">
+<img alt="User profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBZuKNZroKo-4BltcgkO_8oPTwFEkKziuexT0H9aHkLnjbeNx53wXnqdHBjWA88f27--Gw0qeolvfJHgosb8W6Cc-aXqJOICaskDJuReyxHRw_zRhqnOBAU5nZ0tS3znoTt0rFnkrXq-knX-jAdtKeOF3pMB544x46w7YUuUro3E9t1-dBIJ7CX2dRsywpZaHGP772mW0ENgUU7Jfu7s6cO_dvxpBOfJRDqYmWAMlloeuMsCHzqybPRyZr1mThEd27TafCTcvvqDTj"/>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-32 px-margin-mobile max-w-max-width-content mx-auto">
+<!-- Welcome Section -->
+<section class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg-mobile text-on-surface">Dashboard Overview</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Welcome back, Admin. Here's what's happening today.</p>
+</section>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-xl">
+<!-- Total Volunteers Card -->
+<div class="glass-card p-md rounded-xl border border-outline-variant shadow-sm flex flex-col gap-xs transition-transform hover:scale-[1.02] cursor-default border-t-4 border-t-primary">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary-container" data-icon="groups">groups</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">+12%</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Volunteers</h3>
+<p class="font-display-lg text-display-lg text-on-surface">1,284</p>
+</div>
+<!-- Active Tasks Card -->
+<div class="glass-card p-md rounded-xl border border-outline-variant shadow-sm flex flex-col gap-xs transition-transform hover:scale-[1.02] cursor-default border-t-4 border-t-secondary">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary" data-icon="assignment">assignment</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">42 Open</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Tasks</h3>
+<p class="font-display-lg text-display-lg text-on-surface">86</p>
+</div>
+<!-- Pending Submissions Card -->
+<div class="glass-card p-md rounded-xl border border-outline-variant shadow-sm flex flex-col gap-xs transition-transform hover:scale-[1.02] cursor-default border-t-4 border-t-tertiary">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary" data-icon="pending_actions">pending_actions</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Urgent</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Pending Submissions</h3>
+<p class="font-display-lg text-display-lg text-on-surface">14</p>
+</div>
+</div>
+<!-- Main Content Area: Submissions & Actions -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<!-- Review Submissions List -->
+<div class="lg:col-span-2">
+<div class="flex items-center justify-between mb-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Recent Submissions</h3>
+<button class="font-label-md text-label-md text-primary flex items-center gap-1">
+                        View All <span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- Submission Item 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl flex items-center justify-between gap-md shadow-[0px_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="User Avatar" class="w-12 h-12 rounded-full border-2 border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIwHsj5KI8PZP3DN257iZ3xorSm6MQVeqrYfbcJTDcxsK7NIQ5aNWdJzq285ddfoCiwtbHT_ShI3fnfl5gv_-UG9o9lBEE5vyyBWZO3kZaA0hBcWmyY0HheVL08D23SGVo7b8Xdj1qc6LHxMpxs2RJr4BuxI-7L1mrVbu9fdEdBK3Xieo3cKcwntAdGJGJOOSKcilC6ywLIvL19JCUEl27O3KlbWw51liiY9G921Jd5X0WmeOhTw20VLSv3rtvH46KeZ0shDTiHDuL"/>
+<span class="absolute -bottom-1 -right-1 bg-primary text-white text-[10px] px-1 rounded-full font-bold">L4</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Anjali Sharma</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Food Distribution Drive • 2h ago</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-error-container text-error hover:bg-error hover:text-white transition-colors active-scale">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container hover:opacity-90 transition-opacity active-scale">
+<span class="material-symbols-outlined" data-icon="check">check</span>
+</button>
+</div>
+</div>
+<!-- Submission Item 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl flex items-center justify-between gap-md shadow-[0px_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="User Avatar" class="w-12 h-12 rounded-full border-2 border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6GMuIaNxzrFIaLqSCAWcdZV1bC-9n2Km6DEPoxagnUJxvMNlwdZasNvc2g3uyzMCtjPas6AEvmqHvP_CYl0jtLh7LDRaj8CTSByGo1nk-hnTg1EkphiYjXdrJyVbjpmc2v4c-Fd2aepqXUPKOcEYs44HE_Y0G7zjT76r7caHGwJeKaM1u_n07ZLUjCC1eJE2VXrvlztyiEQm9ZKoeO4avFm6QVCpX-QScslnDE69sG4UQH__Dt40tsE1qp5TFW2VhzDo9rk2_pIxb"/>
+<span class="absolute -bottom-1 -right-1 bg-primary text-white text-[10px] px-1 rounded-full font-bold">L2</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Raj Malhotra</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Weekend Literacy Class • 5h ago</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-error-container text-error hover:bg-error hover:text-white transition-colors active-scale">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container hover:opacity-90 transition-opacity active-scale">
+<span class="material-symbols-outlined" data-icon="check">check</span>
+</button>
+</div>
+</div>
+<!-- Submission Item 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl flex items-center justify-between gap-md shadow-[0px_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="User Avatar" class="w-12 h-12 rounded-full border-2 border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQYPwEdU2iJsJjJBEcstOvrSI0oJqY6mSSGZGXKFJPXq19nsLwWu_Ss7XhaV3-l36thPfzuz_e4oDNWXF1QhLmIxjWNJIoOdnmV5E4srGmEZI5eemU5zOjd-dNmoUnXaP0cnt3MDrjLMRfOpWdQ4phYWo2ortXGCeIiZqNrkamvyyjTAjYAIKcUgYHWfgHjQwIx1ufUFGlXmCEXHExMQ1PrwgYVsfD4ESDA9ZEbWi_13CFmqqQjv2ZdE2KJNFIPAf_kfSEYv3Pa1XD"/>
+<span class="absolute -bottom-1 -right-1 bg-primary text-white text-[10px] px-1 rounded-full font-bold">L8</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Priya Verma</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Medical Camp Support • Yesterday</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-error-container text-error hover:bg-error hover:text-white transition-colors active-scale">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container hover:opacity-90 transition-opacity active-scale">
+<span class="material-symbols-outlined" data-icon="check">check</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Actions & Community Impact -->
+<div class="space-y-lg">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md">Quick Actions</h3>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center p-md bg-white border border-outline-variant rounded-xl hover:bg-primary/5 transition-colors group active-scale">
+<span class="material-symbols-outlined text-primary mb-2 transition-transform group-hover:scale-110" data-icon="campaign">campaign</span>
+<span class="font-label-sm text-label-sm text-on-surface">Broadcast</span>
+</button>
+<button class="flex flex-col items-center justify-center p-md bg-white border border-outline-variant rounded-xl hover:bg-primary/5 transition-colors group active-scale">
+<span class="material-symbols-outlined text-primary mb-2 transition-transform group-hover:scale-110" data-icon="contact_mail">contact_mail</span>
+<span class="font-label-sm text-label-sm text-on-surface">Send Invites</span>
+</button>
+<button class="flex flex-col items-center justify-center p-md bg-white border border-outline-variant rounded-xl hover:bg-primary/5 transition-colors group active-scale">
+<span class="material-symbols-outlined text-primary mb-2 transition-transform group-hover:scale-110" data-icon="assessment">assessment</span>
+<span class="font-label-sm text-label-sm text-on-surface">Reports</span>
+</button>
+<button class="flex flex-col items-center justify-center p-md bg-white border border-outline-variant rounded-xl hover:bg-primary/5 transition-colors group active-scale">
+<span class="material-symbols-outlined text-primary mb-2 transition-transform group-hover:scale-110" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm text-on-surface">Config</span>
+</button>
+</div>
+</div>
+<div class="bg-primary-container text-on-primary-container p-md rounded-2xl relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline-md text-headline-md font-bold mb-1">Impact Milestone</h4>
+<p class="font-body-md text-body-md opacity-90 mb-4">You are only 120 submissions away from the 10k goal!</p>
+<div class="h-3 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-white transition-all duration-1000 ease-out" style="width: 85%;"></div>
+</div>
+<div class="flex justify-between mt-2 font-label-sm text-label-sm">
+<span>8,450 Verified</span>
+<span>10,000 Goal</span>
+</div>
+</div>
+<!-- Abstract Background Pattern -->
+<div class="absolute -right-8 -bottom-8 opacity-20">
+<span class="material-symbols-outlined text-[120px]" data-icon="auto_graph">auto_graph</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Create New Task Button (FAB Style for Admin) -->
+<button class="fixed bottom-24 right-margin-mobile flex items-center gap-2 bg-gradient-to-r from-primary to-primary-container text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-90 z-40">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider">Create New Task</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-2 pb-safe px-2 bg-surface/90 rounded-t-xl backdrop-blur-lg border-t border-outline-variant shadow-[0px_-4px_20px_rgba(0,0,0,0.04)]">
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-label-sm text-label-sm">Tasks</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-label-sm text-label-sm">Submit</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="auto_graph">auto_graph</span>
+<span class="font-label-sm text-label-sm">Impact</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</div>
+</nav>
+<script>
+        // Simple click interaction feedback for submission buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const icon = button.querySelector('.material-symbols-outlined');
+                if (icon && (icon.innerText === 'check' || icon.innerText === 'close')) {
+                    const row = button.closest('.bg-surface-container-lowest');
+                    row.style.opacity = '0.5';
+                    row.style.transform = 'translateX(20px)';
+                    row.style.transition = 'all 0.4s ease';
+                    setTimeout(() => {
+                        row.remove();
+                    }, 400);
+                }
+            });
+        });
+    </script>
+</body></html>

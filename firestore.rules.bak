@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(email) {
+      return isAuthenticated() && request.auth.token.email == email;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        (request.auth.token.email.matches('.*@aye-pankh\\.org$') ||
+         get(/databases/$(database)/documents/users/$(request.auth.token.email)).data.role == 'admin');
+    }
+
+    // Users collection — key is the user's email
+    match /users/{email} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(email) || isAdmin();
+    }
+
+    // Tasks collection — only admin can write tasks
+    match /tasks/{taskId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Active tasks collection — volunteers can read/write their own
+    match /active_tasks/{activeTaskId} {
+      allow read: if isAuthenticated() &&
+        (resource == null || resource.data.userEmail == request.auth.token.email);
+      allow create: if isAuthenticated() &&
+        request.resource.data.userEmail == request.auth.token.email;
+      allow update: if isAuthenticated() &&
+        resource.data.userEmail == request.auth.token.email &&
+        request.resource.data.userEmail == request.auth.token.email;
+      allow delete: if isAuthenticated() &&
+        resource.data.userEmail == request.auth.token.email;
+    }
+
+    // Submissions collection — any authenticated user can create, only admin can update/delete
+    match /submissions/{submissionId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isAdmin();
+    }
+  }
+}

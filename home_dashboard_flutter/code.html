@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NayePankh Hub - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#005049",
+                    "tertiary-fixed": "#ffddb8",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-surface-variant": "#3d4947",
+                    "tertiary": "#825100",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#006a61",
+                    "secondary-container": "#316bf3",
+                    "outline-variant": "#bcc9c6",
+                    "surface-variant": "#d3e4fe",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#6bd8cb",
+                    "inverse-primary": "#6bd8cb",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#008378",
+                    "surface-dim": "#cbdbf5",
+                    "on-surface": "#0b1c30",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "background": "#f8f9ff",
+                    "primary-fixed": "#89f5e7",
+                    "on-tertiary-fixed": "#2a1700",
+                    "outline": "#6d7a77",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "secondary": "#0051d5",
+                    "on-secondary-container": "#fefcff",
+                    "surface-container-high": "#dce9ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface": "#f8f9ff",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#00685f",
+                    "surface-bright": "#f8f9ff",
+                    "tertiary-container": "#a36700",
+                    "surface-container": "#e5eeff",
+                    "on-primary-container": "#f4fffc",
+                    "on-background": "#0b1c30",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-primary-fixed": "#00201d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "40px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "gutter": "20px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "max-width-content": "1200px",
+                    "sm": "12px",
+                    "margin-desktop": "auto",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .active-nav-pill {
+            background-color: #008378;
+            color: #f4fffc;
+            border-radius: 9999px;
+            padding: 4px 16px;
+        }
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite linear;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        body {
+            background-color: #f8f9ff;
+            font-family: 'Inter', sans-serif;
+            color: #0b1c30;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm h-16 flex items-center justify-between px-margin-mobile">
+<div class="flex items-center gap-3">
+<img alt="NayePankh Foundation Logo" class="w-10 h-10 object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOng0A_nB40syAdZEVx6fUqNR2WKQQGw4js5bJyriWExuwoMoXaXCi7SbyZaSVLQIK8n0tAayDASqSVHkyNua6JybKH_imVBj61-_XXLeoS6pkhOHTLD2_jFaUHZSpftjBoidMCUAfN4nYlCIo33cqv1Ahl3xEuGCD4NvXnu9o0Iy_KzuyH2DLTeh3JplfNZvqYpbFUCxdXSau09OLb3ubiubr2RV6eN2Ts0QsEur8JWEZOym2R8YZz9fI7USLiyEma8S2R36JxOyh"/>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">NayePankh Hub</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-opacity">notifications</button>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border-2 border-surface shadow-sm">
+<img alt="User Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9rff8U575rWzauDwhr824berUcGkKzu2Yw0FIVI21AYNA5f9U0E97U_KwU0vsHW0iiQOsEqi6OLN_QE_Y6xd-jvR8Ws4cLL_S4c1YfJpsNUeeA3cjIeUt7ZSC6Q9eHWDDIHwyMwMYOECgyZCI-cy3eH2u_xota_glYvbeuvJGx4RbSvkGmvjhA7H-Gz_xqbVBN-BpV8QNRo8qovjlzTFTOEScK0DriwvFUgWGu33Y0RkcMmQKiFWzE9lNPyeyqlg7JYmty9skaRCf"/>
+</div>
+</div>
+</header>
+<main class="pt-20 px-margin-mobile max-w-max-width-content mx-auto">
+<!-- Welcome Header -->
+<section class="mt-4 mb-8">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Namaste, Arjun!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Ready to make a difference today? Here's your impact snapshot.</p>
+</section>
+<!-- Stats Grid (Bento Style) -->
+<section class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
+<!-- Tasks Card -->
+<div class="glass-card p-5 rounded-xl flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary bg-primary-container/20 p-2 rounded-lg">assignment</span>
+<span class="text-xs font-label-sm text-primary px-2 py-1 bg-primary/10 rounded-full">+2 today</span>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-on-surface mt-2">12</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Tasks</p>
+</div>
+</div>
+<!-- Points Card -->
+<div class="glass-card p-5 rounded-xl flex flex-col justify-between bg-gradient-to-br from-white to-secondary-container/5 hover:scale-[1.02] transition-transform duration-300 border-l-4 border-l-secondary">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary bg-secondary-fixed/30 p-2 rounded-lg">stars</span>
+<span class="text-xs font-label-sm text-secondary px-2 py-1 bg-secondary/10 rounded-full">Top 5%</span>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-on-surface mt-2">450</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Karma Points</p>
+</div>
+</div>
+<!-- Impact Card -->
+<div class="glass-card p-5 rounded-xl flex flex-col justify-between col-span-2 md:col-span-1 bg-gradient-to-br from-white to-primary-container/5 hover:scale-[1.02] transition-transform duration-300 border-l-4 border-l-primary">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary bg-primary-fixed/30 p-2 rounded-lg">auto_graph</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-30">info</span>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-on-surface mt-2">95</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Lives Touched</p>
+</div>
+<div class="h-2 w-full bg-outline-variant/30 rounded-full mt-3 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[95%]"></div>
+</div>
+</div>
+</section>
+<!-- Quick Action Banner -->
+<section class="relative rounded-2xl overflow-hidden mb-10 h-48 md:h-64 shadow-lg group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A warm, emotional photograph of a group of joyful children in a rural Indian school environment, smiling brightly at the camera. The scene is illuminated by soft, natural golden hour sunlight, highlighting the vibrant colors of their clothing and the surrounding greenery. The mood is optimistic and deeply human, reflecting the foundation's core mission of community support and education." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBV4aFwoz6ypVgsWsugI3L98d_no216N544Rf4CagU2fU0MClZFA1G8falMroTLYpINIVz_DBU_7vDPZFivSM2z6zYi_ecZNxhjVYUmuxNVazZtqPeguMki9LMKHkajkqD32bAJbdBIZxUBxN7ir9m7tPL6l4KeH8FaFuvCLzTn58PONfeAFMGk0Pwu-IuRrxQE8dO_zCRQY-O-6eASMllZfIpJgBpMc5pymArCfDQkm0suWnovzgu4VxX9KvHAzOT_137Y6uG1reQP')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white font-headline-md text-headline-md mb-2">Winter Blanket Drive 2024</h3>
+<p class="text-white/80 font-body-md text-body-md mb-4 max-w-lg">Join our mission to provide warmth to 500 families in rural UP this winter.</p>
+<div class="flex gap-3">
+<button class="bg-primary text-white font-label-md text-label-md px-6 py-2 rounded-full hover:bg-primary-container transition-colors shadow-md">Join Mission</button>
+<button class="bg-white/20 backdrop-blur-md text-white font-label-md text-label-md px-6 py-2 rounded-full hover:bg-white/30 transition-colors">Details</button>
+</div>
+</div>
+</section>
+<!-- Active Tasks Section -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md text-on-surface">Active Tasks</h2>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline">
+                    View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Task Card 1 -->
+<div class="glass-card flex flex-col md:flex-row items-start md:items-center p-4 rounded-xl gap-4 group cursor-pointer hover:shadow-md transition-all">
+<div class="w-full md:w-24 h-16 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline-md text-label-md md:text-headline-md mb-1 group-hover:text-primary transition-colors">Submit Education Report</h4>
+<p class="font-body-md text-label-sm text-on-surface-variant">Weekly progress tracking for the Lucknow batch.</p>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-2">
+<span class="px-3 py-1 bg-error-container text-on-error-container text-xs font-label-sm rounded-full">Due in 2h</span>
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Task Card 2 -->
+<div class="glass-card flex flex-col md:flex-row items-start md:items-center p-4 rounded-xl gap-4 group cursor-pointer hover:shadow-md transition-all">
+<div class="w-full md:w-24 h-16 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline-md text-label-md md:text-headline-md mb-1 group-hover:text-primary transition-colors">Onboard New Volunteers</h4>
+<p class="font-body-md text-label-sm text-on-surface-variant">Review 3 applications for the Social Media wing.</p>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-2">
+<span class="px-3 py-1 bg-surface-variant text-on-surface-variant text-xs font-label-sm rounded-full">Tomorrow</span>
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Task Card 3 -->
+<div class="glass-card flex flex-col md:flex-row items-start md:items-center p-4 rounded-xl gap-4 group cursor-pointer hover:shadow-md transition-all">
+<div class="w-full md:w-24 h-16 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline-md text-label-md md:text-headline-md mb-1 group-hover:text-primary transition-colors">Upload Event Media</h4>
+<p class="font-body-md text-label-sm text-on-surface-variant">Photos from the Food Distribution Drive.</p>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-2">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-label-sm rounded-full">Completed</span>
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Daily Motivation Quote -->
+<section class="glass-card rounded-2xl p-8 mb-20 bg-gradient-to-r from-primary/5 to-secondary/5 border-dashed border-2 border-outline-variant">
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 40px; opacity: 0.4;">format_quote</span>
+<p class="font-body-lg text-body-lg italic text-on-surface-variant max-w-2xl">
+                    "The best way to find yourself is to lose yourself in the service of others."
+                </p>
+<p class="mt-4 font-label-md text-label-md text-on-surface font-bold">— Mahatma Gandhi</p>
+</div>
+</section>
+</main>
+<!-- FAB for Task-Focused Screens (Suppressed on Home as per guidelines but requested by user flow implies accessibility) -->
+<!-- Applying guideline check: "Contextual FAB Suppression... Render if screen purpose aligns... Home or Dashboard" -->
+<button class="fixed right-6 bottom-24 z-40 w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-2 pb-safe px-2 bg-surface/90 backdrop-blur-lg border-t border-outline-variant shadow-[0px_-4px_20px_rgba(0,0,0,0.04)] h-16 md:hidden">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-sm text-label-sm">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-label-sm text-label-sm">Submit</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">auto_graph</span>
+<span class="font-label-sm text-label-sm">Impact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<!-- Desktop Navigation Side Anchors (Simulated for Web consistency) -->
+<aside class="hidden md:flex fixed left-0 top-16 bottom-0 w-64 bg-surface border-r border-outline-variant p-6 flex-col gap-2">
+<div class="mb-4 text-xs font-label-md text-outline uppercase tracking-widest px-4">Menu</div>
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container px-4 py-3 rounded-xl" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 rounded-xl hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-md text-label-md">My Tasks</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 rounded-xl hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined">auto_graph</span>
+<span class="font-label-md text-label-md">Leaderboard</span>
+</a>
+<div class="mt-auto mb-4 border-t border-outline-variant pt-4">
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 rounded-xl hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-4 text-error px-4 py-3 rounded-xl hover:bg-error-container/20 transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</aside>
+<script>
+        // Micro-interaction for hover states on bento grid items
+        const cards = document.querySelectorAll('.glass-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>
