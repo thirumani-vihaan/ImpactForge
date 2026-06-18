@@ -139,27 +139,75 @@ Once you place your captured screenshots in the `screenshots/` directory, they w
 
 ### Onboarding & Security
 
-| Splash Screen | Login Screen | Signup Screen |
-| :---: | :---: | :---: |
-| <img src="screenshots/01_splash.png" width="220" alt="Splash Screen Preview"/> | <img src="screenshots/02_login.png" width="220" alt="Login Screen Preview"/> | <img src="screenshots/03_signup.png" width="220" alt="Signup Screen Preview"/> |
+<table>
+  <tr>
+    <td align="center" valign="top" width="33%">
+      <b>Splash Screen</b><br/><br/>
+      <img src="screenshots/01_splash.png" width="220" alt="Splash Screen Preview"/>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <b>Login Screen</b><br/><br/>
+      <img src="screenshots/02_login.png" width="220" alt="Login Screen Preview"/>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <b>Signup Screen</b><br/><br/>
+      <img src="screenshots/03_signup.png" width="220" alt="Signup Screen Preview"/>
+    </td>
+  </tr>
+</table>
 
 ### Volunteer Lifecycle
 
-| Home Dashboard | Tasks List | Task Details |
-| :---: | :---: | :---: |
-| <img src="screenshots/04_home.png" width="220" alt="Home Dashboard Preview"/> | <img src="screenshots/05_tasks.png" width="220" alt="Tasks List Preview"/> | <img src="screenshots/06_task_details.png" width="220" alt="Task Details Preview"/> |
+<table>
+  <tr>
+    <td align="center" valign="top" width="33%">
+      <b>Home Dashboard</b><br/><br/>
+      <img src="screenshots/04_home.png" width="220" alt="Home Dashboard Preview"/>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <b>Tasks List</b><br/><br/>
+      <img src="screenshots/05_tasks.png" width="220" alt="Tasks List Preview"/>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <b>Task Details</b><br/><br/>
+      <img src="screenshots/06_task_details.png" width="220" alt="Task Details Preview"/>
+    </td>
+  </tr>
+</table>
 
 ### Submissions & Analytics
 
-| Task Submission | Impact Analytics |
-| :---: | :---: |
-| <img src="screenshots/07_task_submission.png" width="220" alt="Task Submission Preview"/> | <img src="screenshots/08_impact_analytics.png" width="220" alt="Impact Analytics Preview"/> |
+<table>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <b>Task Submission</b><br/><br/>
+      <img src="screenshots/07_task_submission.png" width="220" alt="Task Submission Preview"/>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <b>Impact Analytics</b><br/><br/>
+      <img src="screenshots/08_impact_analytics.png" width="220" alt="Impact Analytics Preview"/>
+    </td>
+  </tr>
+</table>
 
 ### User Settings & Profile
 
-| Profile Screen | Edit Profile | Account Settings |
-| :---: | :---: | :---: |
-| <img src="screenshots/09_profile.png" width="160" alt="Profile Screen Preview"/> | <img src="screenshots/10_edit_profile.png" width="160" alt="Edit Profile Preview"/> | <img src="screenshots/12_settings.png" width="160" alt="Account Settings Preview"/> |
+<table>
+  <tr>
+    <td align="center" valign="top" width="33%">
+      <b>Profile Screen</b><br/><br/>
+      <img src="screenshots/09_profile.png" width="160" alt="Profile Screen Preview"/>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <b>Edit Profile</b><br/><br/>
+      <img src="screenshots/10_edit_profile.png" width="160" alt="Edit Profile Preview"/>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <b>Account Settings</b><br/><br/>
+      <img src="screenshots/12_settings.png" width="160" alt="Account Settings Preview"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
