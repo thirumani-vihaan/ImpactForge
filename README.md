@@ -149,17 +149,17 @@ Once you place your captured screenshots in the `screenshots/` directory, they w
 | :---: | :---: | :---: |
 | <img src="screenshots/04_home.png" width="220" alt="Home Dashboard Preview"/> | <img src="screenshots/05_tasks.png" width="220" alt="Tasks List Preview"/> | <img src="screenshots/06_task_details.png" width="220" alt="Task Details Preview"/> |
 
-### Submissions & Leaderboard
+### Submissions & Analytics
 
-| Task Submission | Impact Analytics | Leaderboard |
+| Task Submission | Impact Analytics |
+| :---: | :---: |
+| <img src="screenshots/07_task_submission.png" width="220" alt="Task Submission Preview"/> | <img src="screenshots/08_impact_analytics.png" width="220" alt="Impact Analytics Preview"/> |
+
+### User Settings & Profile
+
+| Profile Screen | Edit Profile | Account Settings |
 | :---: | :---: | :---: |
-| <img src="screenshots/07_task_submission.png" width="220" alt="Task Submission Preview"/> | <img src="screenshots/08_impact_analytics.png" width="220" alt="Impact Analytics Preview"/> | <img src="screenshots/11_leaderboard.png" width="220" alt="Leaderboard Preview"/> |
-
-### User Settings & Admin Dashboard
-
-| Profile Screen | Edit Profile | Account Settings | Admin Dashboard |
-| :---: | :---: | :---: | :---: |
-| <img src="screenshots/09_profile.png" width="160" alt="Profile Screen Preview"/> | <img src="screenshots/10_edit_profile.png" width="160" alt="Edit Profile Preview"/> | <img src="screenshots/12_settings.png" width="160" alt="Account Settings Preview"/> | <img src="screenshots/13_admin_dashboard.png" width="160" alt="Admin Dashboard Preview"/> |
+| <img src="screenshots/09_profile.png" width="160" alt="Profile Screen Preview"/> | <img src="screenshots/10_edit_profile.png" width="160" alt="Edit Profile Preview"/> | <img src="screenshots/12_settings.png" width="160" alt="Account Settings Preview"/> |
 
 ---
 
