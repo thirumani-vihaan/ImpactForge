@@ -35,10 +35,10 @@ The project follows a clean architecture separating the presentation layer, reac
 ```mermaid
 graph TD
     %% Styling
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
-    classDef presentation fill:#e1f5fe,stroke:#0288d1,stroke-width:1.5px;
-    classDef controller fill:#e8f5e9,stroke:#388e3c,stroke-width:1.5px;
-    classDef backend fill:#fffde7,stroke:#fbc02d,stroke-width:1.5px;
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px,color:#111;
+    classDef presentation fill:#e1f5fe,stroke:#0288d1,stroke-width:1.5px,color:#0b3c5d;
+    classDef controller fill:#e8f5e9,stroke:#388e3c,stroke-width:1.5px,color:#0f5112;
+    classDef backend fill:#fffde7,stroke:#fbc02d,stroke-width:1.5px,color:#684a01;
 
     subgraph Presentation [Presentation Layer - Flutter]
         UI[App Shell / Screens]:::presentation
